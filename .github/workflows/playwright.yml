@@ -16,11 +16,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-#      - name: Run ESLint check
-#        run: |
-#          echo "Running ESLint to check for linting issues..."
-#          npm run lint
-
       - name: Run Prettier check
         run: |
           echo "Running Prettier to check for formatting issues..."
