@@ -25,7 +25,6 @@ test('TL-22-1 Mocked auth', async ({ page }) => {
   const loginPage = new LoginPage(page)
   await loginPage.open()
   await page.route('**/login/student*', async (route) => {
-    //const responseBody = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqZWdvcm92YWoiLCJleHAiOjE3NDE5ODA3OTUsImlhdCI6MTc0MTk2Mjc5NX0.P54DRnca66s644QHUSBZ22SuFbj_vBuD_0LMkaVEz7lfaMvCpdb5HcLr3m5ky5aQOt6dx6GEzEVtOVRho70unA';
     const responseBody = 'test.test.test'
     await route.fulfill({
       status: 200,

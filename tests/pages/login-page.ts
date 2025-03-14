@@ -10,14 +10,12 @@ export class LoginPage extends BasePage {
   readonly signInButton: Button
   readonly usernameField: Input
   readonly passwordField: Input
-  // add more locators here
 
   constructor(page: Page) {
     super(page)
     this.signInButton = new Button(page, '[data-name=signIn-button]')
     this.usernameField = new Input(page, '[data-name=username-input]')
     this.passwordField = new Input(page, '[data-name=password-input]')
-    // continue with the rest of the implementation below
   }
 
   async open() {
@@ -32,6 +30,4 @@ export class LoginPage extends BasePage {
     await this.signInButton.click()
     return new OrderPage(this.page)
   }
-
-  // continue with the rest of the implementation below
 }
